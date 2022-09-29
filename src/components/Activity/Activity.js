@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Activity = (props) => {
-    const { id, name, intro, duration, img, quantity } = props.activity;
+    const { handleAddToCart, activity } = props;
+    const { name, intro, duration, img, quantity } = activity;
     return (
         <div className="col">
             <div className="card h-100">
@@ -11,7 +12,7 @@ const Activity = (props) => {
                     <p className="card-text">{intro}</p>
                     <p className="card-text">Time required: <strong>{duration}hours</strong></p>
                 </div>
-                <button type="button" className="btn btn-primary m-3">Add to list</button>
+                <button onClick={() => handleAddToCart(activity)} type="button" className="btn btn-primary m-3">Add to list</button>
             </div>
         </div>
     );
