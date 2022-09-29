@@ -2,7 +2,7 @@
   {
     "id": "a1",
     "name": "HTML Practice",
-    "duration": 1,
+    "duration": 2,
     "intro": "Practice HTML regularly and become a master in HTML.",
     "img": "https://mujibmart.com/wp-content/uploads/2022/09/html_practice.jpg",
     "break": 10,
@@ -11,7 +11,7 @@
   {
     "id": "a2",
     "name": "CSS Practice",
-    "duration": 2,
+    "duration": 3,
     "intro": "Practice CSS regularly and become a master in CSS.",
     "img": "https://mujibmart.com/wp-content/uploads/2022/09/css_practice.jpg",
     "break": 20,
@@ -20,7 +20,7 @@
   {
     "id": "a3",
     "name": "Bootstrap Practice",
-    "duration": 3,
+    "duration": 4,
     "intro": "Practice Bootstrap regularly and become a master in Bootstrap.",
     "img": "https://mujibmart.com/wp-content/uploads/2022/09/bootstrap_practice.jpg",
     "break": 30,
@@ -29,7 +29,7 @@
   {
     "id": "a4",
     "name": "Tailwindcss Practice",
-    "duration": 1,
+    "duration": 4,
     "intro": "Practice Tailwindcss regularly and become a master in Tailwindcss.",
     "img": "https://mujibmart.com/wp-content/uploads/2022/09/tailwindcss_practice.jpg",
     "break": 40,
@@ -38,7 +38,7 @@
   {
     "id": "a5",
     "name": "JavaScript Practice",
-    "duration": 3,
+    "duration": 5,
     "intro": "Practice JavaScript regularly and become a master in JavaScript.",
     "img": "https://mujibmart.com/wp-content/uploads/2022/09/javascript_practice.jpg",
     "break": 50,
@@ -47,7 +47,7 @@
   {
     "id": "a6",
     "name": "ReactJS Practice",
-    "duration": 3,
+    "duration": 7,
     "intro": "Practice ReactJS regularly and become a master in ReactJS.",
     "img": "https://mujibmart.com/wp-content/uploads/2022/09/reactjs_practice.jpg",
     "break": 60,

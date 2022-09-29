@@ -1,16 +1,19 @@
 import React from 'react';
 
-const Activity = () => {
+const Activity = (props) => {
+    const { id, name, intro, duration, img, quantity } = props.activity;
     return (
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
+        <div className="col">
+            <div className="card h-100">
+                <img src={img} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{name}</h5>
+                    <p className="card-text">{intro}</p>
+                    <p className="card-text">Time required: <strong>{duration}hours</strong></p>
                 </div>
+                <button type="button" className="btn btn-primary m-3">Add to list</button>
             </div>
+        </div>
     );
 };
 

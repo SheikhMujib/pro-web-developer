@@ -3,7 +3,7 @@ import Main from './components/Main/Main';
 
 function App() {
   return (
-    <div>
+    <div className='bg-secondary'>
       <Main></Main>
     </div>
   );
