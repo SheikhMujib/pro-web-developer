@@ -35,6 +35,16 @@ const Cart = ({ cart }) => {
                     <p>Age</p>
                 </div>
             </div>
+            {/* Add a Break */}
+            <div class="text-center mt-4">
+                <h4>Add A Break</h4>
+                <div class="row row-md-1 btn-group bg-white px-2 py-3">
+                    <div class="col"><button type="button" class="btn btn-outline-secondary">10m</button></div>
+                    <div class="col"><button type="button" class="btn btn-outline-secondary">20m</button></div>
+                    <div class="col"><button type="button" class="btn btn-outline-secondary">30m</button></div>
+                    <div class="col"><button type="button" class="btn btn-outline-secondary">40m</button></div>
+                </div>
+            </div>
             {/* Practice Plan Details */}
             <div className="row row-cols-1 mt-5">
                 <div className="col"><h4>Practice Plan Details</h4></div>
