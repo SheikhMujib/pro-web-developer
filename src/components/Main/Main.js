@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import Activity from '../Activity/Activity';
 import Cart from '../Cart/Cart';
+import Qa from '../Qa/Qa';
 
 const Main = () => {
     const [activities, setActivities] = useState([]);
@@ -40,6 +41,9 @@ const Main = () => {
                 <div className='col-sm-3 bg-light'>
                     <Cart cart={cart}></Cart>
                 </div>
+            </div>
+            <div>
+                <Qa></Qa>
             </div>
         </div>
     );

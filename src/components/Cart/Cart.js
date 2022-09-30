@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { addToDb, getStoredCart } from '../../utilities/fakedb';
 
 const Cart = ({ cart }) => {
     let totalTime = 0;
@@ -8,12 +9,20 @@ const Cart = ({ cart }) => {
         totalTime = totalTime + activity.duration;
     }
     const [breakTime, setBreakTime] = useState([]);
-    // const [breakTime, setBreakTime] = useState([]);
+
+    useEffect(() => {
+        const storedCart = getStoredCart();
+        // for(const breakTime in storedCart){
+        //     const addedBreak = breakTime.find(breakTime => breakTime.breakTime === breakTime)
+        //     console.log(addedBreak)
+        // }
+    }, [])
 
     const handleBreakTime = (event) => {
-        // console.log(event);
+        console.log(event);
         const time = event.target.innerText;
         setBreakTime(time);
+        addToDb(breakTime)
     }
     return (
         <div className='position-sticky top-0'>
@@ -47,10 +56,10 @@ const Cart = ({ cart }) => {
             <div class="text-center mt-4">
                 <h4>Add A Break</h4>
                 <div class="row row-md-1 btn-group bg-white px-2 py-3">
-                    <div class="col"><button onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">10m</button></div>
-                    <div class="col"><button onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">20m</button></div>
-                    <div class="col"><button onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">30m</button></div>
-                    <div class="col"><button onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">40m</button></div>
+                    <div class="col"><button id='b10' onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">10m</button></div>
+                    <div class="col"><button id='b20' onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">20m</button></div>
+                    <div class="col"><button id='b30' onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">30m</button></div>
+                    <div class="col"><button id='b40' onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">40m</button></div>
                 </div>
             </div>
             {/* Practice Plan Details */}
