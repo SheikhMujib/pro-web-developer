@@ -2,7 +2,7 @@ import React from 'react';
 
 const Activity = (props) => {
     const { handleAddToCart, activity } = props;
-    const { name, intro, duration, img, quantity } = activity;
+    const { name, intro, duration, img} = activity;
     return (
         <div className="col">
             <div className="card h-100">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
+import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import Activity from '../Activity/Activity';
 import Cart from '../Cart/Cart';
 
@@ -38,22 +38,7 @@ const Main = () => {
                 </div>
                 {/* Cart container */}
                 <div className='col-sm-3 bg-light'>
-                    {/* Personal Info */}
-                    <div class="row mt-5">
-                        <div class="col-md-5">
-                            <img className='img-fluid rounded-circle' src="https://mujibmart.com/wp-content/uploads/2022/05/CEO-Mujib.jpg" alt="" />
-                        </div>
-                        <div class="col-md-7">
-                            <div class="row row-cols-1 text-center mt-4">
-                                <div class="col"><h3>Sheikh Mujib</h3></div>
-                                <div class="col"><p><FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Barisal, Bangladesh.</p></div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Practice Plan Details */}
-                    <div class="row row-cols-1 mt-5">
-                        <Cart cart={cart}></Cart>
-                    </div>
+                    <Cart cart={cart}></Cart>
                 </div>
             </div>
         </div>
