@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import Activity from '../Activity/Activity';
+import Cart from '../Cart/Cart';
 
 const Main = () => {
     const [activities, setActivities] = useState([]);
@@ -23,7 +24,7 @@ const Main = () => {
             <div className='row'>
                 {/* Activities container */}
                 <div className='col-sm-9 mt-5 mb-5 px-5'>
-                    <h1 className='text-white'><FontAwesomeIcon icon={faUserGraduate}></FontAwesomeIcon> Pro Web Developer</h1>
+                    <h1 className='text-primary'><FontAwesomeIcon icon={faUserGraduate}></FontAwesomeIcon> Pro Web Developer</h1>
                     <h4 className='my-5'>Select Today's Practice Plan</h4>
                     <div className='row row-cols-1 row-cols-sm-3 g-4'>
                         {
@@ -36,7 +37,7 @@ const Main = () => {
                     </div>
                 </div>
                 {/* Cart container */}
-                <div className='col-sm-3 bg-primary text-white'>
+                <div className='col-sm-3 bg-light'>
                     {/* Personal Info */}
                     <div class="row mt-5">
                         <div class="col-md-5">
@@ -51,9 +52,7 @@ const Main = () => {
                     </div>
                     {/* Practice Plan Details */}
                     <div class="row row-cols-1 mt-5">
-                        <div class="col"><h5>Practice Plan Details</h5></div>
-                        <div class="col"><h6>Practice time: {cart.length}</h6></div>
-                        <div class="col"><h6>Break time: </h6></div>
+                        <Cart cart={cart}></Cart>
                     </div>
                 </div>
             </div>
