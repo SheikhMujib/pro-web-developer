@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
@@ -6,6 +6,14 @@ const Cart = ({ cart }) => {
     let totalTime = 0;
     for (const activity of cart) {
         totalTime = totalTime + activity.duration;
+    }
+    const [breakTime, setBreakTime] = useState([]);
+    // const [breakTime, setBreakTime] = useState([]);
+
+    const handleBreakTime = (event) => {
+        // console.log(event);
+        const time = event.target.innerText;
+        setBreakTime(time);
     }
     return (
         <div className='position-sticky top-0'>
@@ -39,17 +47,17 @@ const Cart = ({ cart }) => {
             <div class="text-center mt-4">
                 <h4>Add A Break</h4>
                 <div class="row row-md-1 btn-group bg-white px-2 py-3">
-                    <div class="col"><button type="button" class="btn btn-outline-secondary">10m</button></div>
-                    <div class="col"><button type="button" class="btn btn-outline-secondary">20m</button></div>
-                    <div class="col"><button type="button" class="btn btn-outline-secondary">30m</button></div>
-                    <div class="col"><button type="button" class="btn btn-outline-secondary">40m</button></div>
+                    <div class="col"><button onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">10m</button></div>
+                    <div class="col"><button onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">20m</button></div>
+                    <div class="col"><button onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">30m</button></div>
+                    <div class="col"><button onClick={(event) => handleBreakTime(event)} type="button" class="btn btn-outline-secondary">40m</button></div>
                 </div>
             </div>
             {/* Practice Plan Details */}
             <div className="row row-cols-1 mt-5">
                 <div className="col"><h4>Practice Plan Details</h4></div>
                 <div className="col"><h5>Total Practice Time: {totalTime}hours</h5></div>
-                <div className="col"><h5>Break Time: </h5></div>
+                <div className="col"><h5>Break Time: {breakTime}</h5></div>
 
             </div>
         </div>
